@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            background-color: rebeccapurple;
+            min-height: 100vh;
+        }
+        main{
+            display: flex;
+            height: 84vh;
+            background-color:blue;
+            flex-direction: row;
+        }
+        #input{
+            background-color: aqua;
+            border: 2vh double rebeccapurple;   
+            width: 40vw;
+            text-align: center;
+        }
+        #output{
+            background-color: cornflowerblue;
+            width: 60vw;
+            border: 2vh double blue;
+            text-align: center;
+        }
+        input{
+
+            background-color:black;
+            color: white;
+            width: 5vw;
+        }
+        header,footer{
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            height: 8vh;
+        }
+    </style>
+    <script>
+        function average(){
+            var n1 = document.getElementById('num1').value;
+            var n2 = document.getElementById('num2').value;
+            var c = (+n1 + +n2)/2;
+            // alert(c);
+            document.getElementById("res").innerHTML = c;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Average Calculator</h1><hr/>
+        </header>
+        <main>
+            <div id="input">
+                <b>Input</b><br/><hr/><br/>
+                <input id="num1" type="number">
+                <input id="num2" type="number">
+                <button id="reset" type="reset">reset</button>
+                <button onclick="average();">Calculate</button>
+            </div>
+            <div id="output">
+                <b>Output</b><br/><hr/><br/>
+                <p id="res"></p>
+            </div>
+        </main>
+        <footer>
+            &copy calculation community
+        </footer>
+    </div>
+</body>
+</html>

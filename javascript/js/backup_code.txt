@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            background-color: rebeccapurple;
+            min-height: 100vh;
+        }
+        main{
+            display: flex;
+            height: 84vh;
+            background-color:blue;
+            flex-direction: row;
+        }
+        #input{
+            background-color: aqua;
+            border: 2vh double rebeccapurple;   
+            width: 40vw;
+            text-align: center;
+        }
+        #output{
+            background-color: cornflowerblue;
+            width: 60vw;
+            border: 2vh double blue;
+            color :aliceblue;
+        }
+        input,button{
+
+            background-color:black;
+            color: white;
+            width: 7vw;
+        }
+        header,footer{
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            height: 8vh;
+        }
+    </style>
+    <script>
+        var arr=[];
+        var i=0;
+        var lis="";
+        function input(){
+            arr[i++] = document.getElementById("num1").value;
+            document.getElementById("num1").value = null;
+        }
+        // const str = arr.toString();
+        // console.log(str)
+        function outputArray(){
+            for(let j=0;j<i;j++){
+                lis += arr[j] + ",";
+            }
+        document.getElementById("lis").innerHTML = ("numbers entered = ",lis);
+        }
+        function calculateAverage(){
+            let sum= +0;
+            for(let j=0;j<i;j++)
+                sum += (+arr[j]);
+            let avg = sum / arr.length; 
+            document.getElementById("avg").innerHTML = ("Average = ",avg);
+        }
+        function clear(){
+            document.getElementById("lis").innerHTML = 0;
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Average Calculator</h1><hr/>
+        </header>
+        <main>
+            <div id="input">
+                <b>Input</b><br/><hr/><br/>
+                <label for="Input">Enter number : 
+                <input id="num1" type="number"><br/><br/>
+                </label><button onclick="input();">Input</button>
+                <button onclick="outputArray();">show list</button>
+                <!-- <button onclick="clear();">clear</button> -->
+                <button onclick="calculateAverage();">Mean</button>
+            </div>
+            <div id="output">
+                <b>Output</b><br/><hr/><br/>
+                <p id="lis"></p>
+                <p id="avg"></p>
+            </div>
+        </main>
+        <footer>
+            &copy calculation community
+        </footer>
+    </div>
+</body>
+</html>

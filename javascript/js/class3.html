@@ -1,0 +1,67 @@
+<!-- Arrays , focus , loops , functions -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="test();" >
+    Data <input type="number" id="data" ><br><br>
+    <button onclick="save();">Save</button>
+    <button onclick="findMax();">Max</button><hr />
+    <div id="array_data">Array Element....</div><hr />
+    <div id="result">Result....</div><hr />
+</body>
+<script>
+    test = function()
+    {
+        //alert('KKKK');
+    }
+       
+    var arr1 = [];
+    function save(){
+        var t1 = document.getElementById('data');
+        var data = t1.value;
+        if(data == ''){ t1.focus(); return; }
+        data = parseInt(data);
+        arr1.push(data);
+        t1.value = '';
+        showArray(arr1);
+        t1.focus();
+    }
+
+    findMax = function()
+    {
+        if(arr1.length == 0)
+        {
+            alert('Array is Empty..');
+            return;
+        }    
+        var max = arr1[0];
+        for(var i=1; i<arr1.length; i++)
+        {
+            if(max < arr1[i]) max = arr1[i];
+        }
+        document.getElementById('result').innerHTML = 'Maximum Element = ' + max;
+    }
+
+    showArray = function(arr){
+        var msg='';
+        //for-in loop...........
+        /*for(var index in arr)
+        {
+            msg += '  ' + arr[index];
+        }*/
+        //for-of loop...........
+        for(var arr_data of arr)
+        {
+            msg += '  ' + arr_data;
+        }
+        document.getElementById('array_data').innerHTML = msg;
+    }    
+
+</script>
+</html>

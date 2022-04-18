@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div id="result"></div>  
+</body>
+
+<script>
+    var arr1=[100,"Ram Kumar",20,"Male"]
+
+    // object in javascript.....
+    var stud1 = {roll:100,
+                name:"Ram Kumar",
+                age:20,
+                gender:"Male" 
+                };
+    var arr2 = [
+        {roll:100, name:"Ram Kumar",age:20,gender:"Male" },
+        {roll:200, name:"Shyam Kumar",age:20,gender:"Male" },
+        {roll:300, name:"Gita Kumari",age:20,gender:"Female" },
+        {roll:400, name:"Ram Kumar",age:20,gender:"Male" },
+        {roll:500, name:"Ram Kumar",age:20,gender:"Male" }
+    ];
+    var table = '<table border="1"><tbody>';
+    for(var obj of arr2){
+        table += '<tr>';
+
+        // table += '<td>'+obj.roll +'</td>';
+        // table += '<td>'+obj.name +'</td>';
+        // table += '<td>'+obj.age +'</td>';
+        // table += '<td>'+obj.gender +'</td>';
+
+        for(var attr in obj ){
+            table += '<td>'+ obj[attr] +'</td>';
+        }
+
+        table += '</tr>';
+    }
+    table += '</tbody></table>';
+    document.getElementById('result').innerHTML = table;
+
+
+    //console.log(arr2);
+    //document.write(arr2);
+
+</script>
+</html>

@@ -1,0 +1,45 @@
+MongoDb commands for Databases :
+
+-   show dbs : View all Databases
+-   use dbName  :   create a new or switch Databases
+-   db : view current Database
+-   db.dropDatabase()   :   Delete Database
+
+MongoDb commands for Collection :
+
+-   show Collections    :   show Collections
+-   db.createCollection('<Collection name>')  :   create a Collection
+-   db.<Collection name>.drop() :   delete Collection
+
+MongoDb commands for Rows :
+
+-   db.<Collection name>.find() :   shows all rows in a Collection
+-   Insert one row
+
+   db.<Collection name>.insert({
+    'name': 'Mr_Robot',
+    'lang': 'JavaScript',
+    'member_since': 2021
+})
+
+-   Insert many row
+
+   db.<Collection name>.insertMany([
+    {
+        'name': 'Mr_Robot',
+        'lang': 'JavaScript',
+        'member_since': 2021
+    }, 
+    {
+        'name': 'BUg',
+        'lang': 'Java',
+        'member_since': 2022
+    },
+    {
+        'name': 'Rahul',
+        'lang': 'C++',
+        'member_since': 2020
+    },
+])
+
+-   db.<Collection name>.find().pretty() :   shows all rows in a Collection(prettified)

@@ -43,3 +43,30 @@ MongoDb commands for Rows :
 ])
 
 -   db.<Collection name>.find().pretty() :   shows all rows in a Collection(prettified)
+-   db.<Collection name>.find({lang: 'Python'}) :   Search in a MongoDb Database
+-   db.<Collection name>.find().limit(2)    :   Limit the number of rows in output
+-   db.<Collection name>.findOne({lang: 'Python'})  :   Find the first row matching th e object
+-   db.<Collection name>.find().count() :   Count the number of rows in the output
+-   db.<Collection name>.update({name: 'Harry'},    
+    {
+        'name': 'Harry',
+        'lang': 'JavaScript',
+        'member_since': '51'
+    }, {upsert: true})  
+    :   Update a row
+
+ -  db.<Collection name>.update({name: 'Rohan'},    
+    {$inc:{
+            member_since: 2
+    }})  
+     :  MongoDb Increment Operator
+
+-  db.<Collection name>.update({name: 'Rohan'},    
+    {$rename:{
+            member_since: 'member'
+    }})  
+     :  MongoDb Rename Operator
+
+-   db.<Collection name>.remove({name: 'Harry'})    :   Delete Row
+-   db.<Collection name>.find({member_since: {$lt: }})    :   Less than
+-   

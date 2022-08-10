@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated button</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .button{
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            outline: 2px solid #fff;
+            padding: 30px 60px;
+            position: relative;
+            overflow: hidden;
+            transition: color 1s;
+        }
+
+        .button:hover{
+            color: #833ab4;
+        }
+
+        .button::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50px;
+            width: 0;
+            height: 100%;
+            background-color: #fff;
+            transform: skewX(35deg);
+            z-index: -1;
+            transition: width 1s;
+        }
+
+        .button:hover::before{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1> button </h1>
+    <a href="#" class="button"> Click Here </a>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!-- simple layout using flex -->
+<!doctype html>
+<html>
+<head>
+<title>Example1</title>
+<style>  
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+    order: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+  }
+  #main > nav {
+    background: #D7E8D4;
+    order: 3;
+  }
+  #main > aside {
+    background: beige;
+    order: 2;
+  }
+  header, footer {
+    background: yellowgreen;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  } 
+</style>
+<script>
+    function generateSeries(){
+        var a = document.getElementById("num1").value;
+        var b = document.getElementById("num2").value;
+        var list = "";
+        var mytable = "<table border='4'>";
+        mytable+="<tr>";
+        for(let i=a ; i<=b ; i++){
+            var z = primeChecker(i);
+            if(z==true){
+              if(list != '')
+                list += ',' + i;
+              else
+               list += i;
+              mytable += "<td>"+ i +"</td>";
+        }
+    }
+                mytable+="</tr>";
+                mytable+="</table>";
+        document.getElementById("result").innerHTML = list;
+        document.getElementById("ans").innerHTML= mytable;
+  }
+    function primeChecker(n){
+        for(var d=2 ; d<=n/2 ; d++)
+            if(n%d == 0)
+                return false;
+        return true;
+    }
+</script>
+</head>
+<body>
+  <header>Header</header>
+  <div id="main">
+    <article>
+        <input id="num1" type="number" placeholder="enter starting range">
+        <input id="num2" type="number" placeholder="enter ending range">
+        <div id="result">result</div>
+        <div id="ans">
+        </div>
+    </article>
+    <nav>Nav</nav>
+    <aside>
+        <button onclick="generateSeries();">generate series</button>
+    </aside>
+  </div>
+  <footer>Footer</footer>
+</body>
+</html>;

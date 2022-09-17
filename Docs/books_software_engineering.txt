@@ -1,0 +1,5 @@
+1.	Clean Code
+2.	Clean Architecture
+3.	The Devops Handbook
+4.	Software Engineering at google
+5.	Understanding Distributed Systems

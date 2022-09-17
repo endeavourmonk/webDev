@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="En">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>MRS Music</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='ac.css'> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='ac.css'>
+    <script src='mrs.js'></script>
+</head>
+
+<body>
+    <!-- This is header part of the page where we can add container. -->
+    <header>
+        <div class="container1" id="div1">
+            <img id="logo"
+                src="data:image/png;base64,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">
+            <h1>MRS Music Basaith</h1>
+        </div>
+    </header><br>
+
+    <!-- This is main part of the page. -->
+    <div class="box">
+        <div class="box1">
+            <div class="container2" id="div2">
+                <p>Welcome to MRS Music. We are hiring artist now.</p>
+                <p>Wants to become an artist, why are you waitting. Contact us.</p>
+                <input class="input" type="text" placeholder="Full Name" required><br>
+                <input class="input" type="number" placeholder="Mobile number" required><br>
+                <input class="input" type="email" placeholder="Email" required><br>
+                <input class="input" type="text" placeholder="Write your queries"><br>
+                <button type="submit">Submit</button>
+            </div>
+            <div class="blog" id="blog">
+                Your code...1
+            </div>
+        </div>
+
+        <div class="box2">
+            <div class="forums" id="forums">
+                Your code...2
+            </div>
+            <div class="banner" id="banner">
+                <b>About us</b>
+                <p>We are hiring artists.</p>
+                <address>
+                    <b>About Developer</b><br>
+                    Written by <a href="achyutaryaa.gmail.com">King Gullu</a><br>
+                    Visit at:<br>
+                    Mithanpura,<br>
+                    Muzaffarpur,<br>
+                    Bihar, India
+                </address>
+            </div>
+        </div>
+    </div>
+    <!--<div id="yt">
+            <!-- here we can link youtube latter.--
+            <iframe src="https://www.youtube.com/c/MRSMUSICBASAITH" title="mrs-music"></iframe>
+        </div>-->
+    <div class="linksArea" id="links">
+        <nav>
+            <button class="btn"><a href="https://www.youtube.com/c/MRSMUSICBASAITH">YouTube</a></button>
+            <button class="btn"><a href="">Facebook</a></button>
+            <button class="btn"><a href="">Instagram</a></button>
+        </nav>
+    </div><br>
+    <!-- This is footer part which we can see in the bottom of the page-->
+    <footer>
+        <strong>&copy;MRS Music Basaith 2020-21</strong><br/>
+        Thanks So much for visiting Us
+    </footer>
+</body>
+
+</html>

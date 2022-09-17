@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting Hub</title>
+
+    <!-- CSS code -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: aquamarine;
+            background-color: black;
+        }
+
+        #box1 {
+            display: inline-block;
+        }
+
+        #box2 {
+            float: right;
+        }
+
+        #display1,
+        #display2 {
+            display: flex;
+            flex-direction: row;
+            height: 80vh;
+            width: 40vw;
+        }
+        #display1-a1,
+        #display2-a1 {
+            width: 20vw;
+            background-color :turquoise;
+        }
+
+        #display1-a2,
+        #display2-a2 {
+            width: 20vw;
+            background-color: aquamarine;
+        }
+
+        button {
+            padding: 4px;
+            border-radius: 10px;
+            background-color: tomato;
+        }
+
+        input {
+            width: 29vw;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Privacy Is A Myth</h1>
+    <div id="box1">
+        <div id="display1">
+            <div id="display1-a1"></div>
+            <div id="display1-a2"></div>
+        </div>
+        <input type="text" placeholder="Enter message" id="m1">
+        <button onclick="displayIn2();">Send</button>
+        <button onclick="clearChat1();">clear chat</button>
+    </div>
+    <div id="box2">
+        <div id="display2">
+            <div id="display2-a1"></div>
+            <div id="display2-a2"></div>
+        </div>
+        <input type="text" placeholder="Enter message" id="m2">
+        <button onclick="displayIn1();">Send</button>
+        <button onclick="clearChat2();">clear chat</button>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        var msg1='';
+        var msg1Self='';
+        var msg2Self='';
+        let msg2 = '';
+        if(msg2 == '') msg2 += "<br>";
+        function displayIn2() {
+            // if(msg2 != '') msg1Self+= "<br>";
+            if(msg1Self != '') msg2 += "<br>";
+            // if(msg1 != '') msg2Self+= "<br>";
+            // if(msg2Self != '') msg2 += "<br>";
+            msg1Self += document.getElementById("m1").value + "<br><br>";
+            msg1 += document.getElementById("m1").value +"<br><br>";
+            document.getElementById("display1-a2").innerHTML = msg1Self;
+            document.getElementById("display2-a1").innerHTML = msg1;
+            document.getElementById("m1").value = null;
+        }
+        function displayIn1() {
+            // if(msg2 != '') msg1Self+= "<br>";
+            // if(msg1Self != '') msg2 += "<br>";
+            // if(msg1 != '') msg2Self+= "<br>";
+            if(msg2Self != '') msg1 += "<br>";
+            msg2Self += document.getElementById("m2").value +"<br><br>";
+            msg2 += document.getElementById("m2").value +"<br><br>";
+            document.getElementById("display2-a2").innerHTML = msg2Self;
+            document.getElementById("display1-a1").innerHTML = msg2;
+            document.getElementById('m2').value = null;
+        }
+        function clearChat2() {
+            msg1 = '';
+            msg2Self='';
+            document.getElementById("display2-a1").innerHTML = msg1
+            document.getElementById("display2-a2").innerHTML = msg2Self;
+        }
+        function clearChat1() {
+            msg2 = '';
+            msg1Self='';
+            document.getElementById("display1-a1").innerHTML = msg2;
+            document.getElementById("display1-a2").innerHTML = msg1Self;
+        }
+    </script>
+</body>
+
+</html>

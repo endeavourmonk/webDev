@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.page{
+    background-color: black;
+    min-height: 100vh;
+}
+nav{
+    background-color: black;
+    color: azure;
+}
+nav button{
+    background-color:darkblue;
+    cursor:pointer;
+    outline: 0;
+    border: 0;
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+}
+nav button span{
+    display: block;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    margin-left: 2px;
+}

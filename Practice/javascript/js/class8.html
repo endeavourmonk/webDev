@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" onsubmit="return save()">
+        <label for="">Name : </label>
+        <input type="text" id="name_id" required /><br />
+        <label for="">Gender : </label>
+        Male <input type="radio" name="gender" onchange="setGender('Male')" checked />
+        Female<input type="radio" name="gender" onchange="setGender('Female')" /><br />
+        <button type="submit" >Save</button>
+        <button type="reset" onclick="clearDiv()">Clear</button>
+        <hr />
+        <div id="result"></div>
+    </form>
+</body>
+<script>
+var gg = 'Male';
+function setGender(g){ gg = g; }
+function save()
+{
+    var name = document.getElementById('name_id').value;
+    if(name === '')
+    {
+        return false;
+    }
+    var result = '<h1>------------OUTPUT----------------</h1><br>';
+    result += 'Name : '+ name + '<br>';
+    result += 'Gender : '+ gg + '<br>';
+    result += '-------------------------------------'; 
+    document.getElementById('result').innerHTML = result;
+    return false;
+}
+
+clearDiv = function()
+{
+    document.getElementById('result').innerHTML = '';
+}
+</script>
+</html>

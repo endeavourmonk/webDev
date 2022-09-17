@@ -1,0 +1,47 @@
+<!-- simple form and javascript introduction -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var a = 10+20;
+        alert(a);
+
+        function sum(x,y)
+        {
+            var a=0;
+            var z;
+            if(a==0)
+            {
+            let z = x+y;
+            alert("In:: " + z);
+            }
+            alert("Out:: " + z);
+        }
+    </script>
+
+
+
+
+</head>
+<body>
+    <form action="handler.html" method="post" >
+
+        User_name <input type="text" name="user_name" required disabled />
+        Password <input type="password" name="password"  />
+
+        <!-- Male <input type="radio" name="gender" id="" checked /><br />
+        Female <input type="radio" name="gender" id=""  /><br />
+        Transgender <input type="radio" name="gender" id="" /><br /> -->
+    
+        <!-- <input type="submit" value="Login" > -->
+        <button type="submit" >Login</button>
+        <hr />
+        <button type="button" onclick="sum(10,20);"  >Click</button>
+    </form>
+</body>
+</html>

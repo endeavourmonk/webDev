@@ -1,242 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ujjawal</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/index.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <script src="https://kit.fontawesome.com/91da132222.js" crossorigin="anonymous"></script>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- ---------------------header section---------------------- -->
     <div id="header">
-      <div class="container">
-
         <nav>
-          <img src="/img/logo.png" class="logo" alt="" />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-square-xmark" onclick="closeMenu()"></i> 
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            <a href="#header"><img src="/img/mylogo.png" class="logo"/></a>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-square-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
+        <div class="container">
 
-        <div class="header-text">
-            <p>Software Developer</p>
-            <h1>Hi, I am <span>Ujjawal</span> </br> from India</h1>
-        </div>
-        
-    </div>
-</div>
-
-<!-- -------------------about section-------------------- -->
-
-<div id="about">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="about-col-1">
-                <img src="/img/me.png" alt="">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aspernatur earum tempora, adipisci consequatur ea temporibus quidem animi excepturi est assumenda, eius debitis et deleniti accusamus reprehenderit deserunt labore! Repellendus magnam cumque commodi corporis cum vel architecto sed. Quam laudantium possimus doloribus cumque voluptatum placeat vero aut non libero a?</p>
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Software Dev</span></br>Fullstack Developer</li>
-                        <li><span>Software Dev</span></br>Fullstack Developer</li>
-                        <li><span>Software Dev</span></br>Fullstack Developer</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>2021 - 2022</span></br>Fullstack Developer</li>
-                        <li><span>2021 - 2022</span></br>Fullstack Developer</li>
-                        <li><span>2020 - 2021</span></br>Fullstack Developer</li>
-                    </ul>
-                </div>
-
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2021 - 2022</span></br>Fullstack Developer</li>
-                        <li><span>2021 - 2022</span></br>Fullstack Developer</li>
-                        <li><span>2020 - 2021</span></br>Fullstack Developer</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-<!-- -----------------services-------------------------- -->
-
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <span class="material-symbols-outlined">language</span>
-                <h2>Web Developer</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae, numquam delectus voluptas rem debitis quaerat soluta iure itaque! Minima?</p>
-                <a href="#">Learn More</a>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, I am <span>Ujjawal</span> </br> from India</h1>
             </div>
 
-            <div>
-                <span class="material-symbols-sharp">extension</span>
-                <h2>Chrome Extension</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae, numquam delectus voluptas rem debitis quaerat soluta iure itaque! Minima?</p>
-                <a href="#">Learn More</a>
-            </div>
+            
 
-            <div>
-                <!-- <span class="material-symbols-sharp">dns</span> -->
-                <span class="material-symbols-sharp">database</span>
-                <h2>Backend Development</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quae, numquam delectus voluptas rem debitis quaerat soluta iure itaque! Minima?</p>
-                <a href="#">Learn More</a>
-            </div>
         </div>
     </div>
-</div>
 
-<!-- -----------------------------Portfolio------------------------------ -->
+    <!-- -------------------about section-------------------- -->
 
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="/img/work1.jpg" alt="">
-                <div class="layer">
-                    <h3>social media website</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perferendis atque beatae provident consectetur eos doloremque molestiae vel neque obcaecati?</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div id="about">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/img/me.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hi, I am Ujjawal Kumar from Bihar, India. I am a Software Developer, Competitive
+                        Programmer and a Freelancer. 
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Certifications</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span></br>C, C++, JavaScript</li>
+                            <li><span>Frontend Development</span></br>HTML5, CSS3, ReactJs, Bootstrap, Tailwind</li>
+                            <li><span>Backend Development</span></br>NodeJs, ExpressJs, php</li>
+                            <li><span>Database</span></br>My SQL, Mongodb</li>
+                            <li><span>Tools</span></br>Git, Github, Google Cloud</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>GeeksForGeeks (2022 - Current)</span></br>Intern technical content writer</li>
+                            <li><span>Youtuber (2021- current)</span></br>Programming Channel</li>
+                            <li><span>Freelancer (2022 - current)</span></br>Content Writer, Web Developer</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Google Developers Group Devfest 2021</span></br>Cloud Storage</li>
+                            <li><span>Google Developers Group</span></br>30 days of Google cloud</li>
+                            <li><span>University of Michigan</span></br>Problem Solving using computational thinking</li>
+                            <li><span>AICTE & Coding Ninjas</span></br>Innovate India Coding Championship</li>
+                            <li><span>Cisco</span></br>Cybersecurity Foundations</li>
+                            <li><span>GeeksForGeeks</span></br>CSS</li>
+                            <li><span>NDG</span></br>Linux Foundations</li>
+                            <li><span>LinkedIn</span></br>JavaScript Essential</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="work">
-                <img src="/img/work2.jpg" alt="">
-                <div class="layer">
-                    <h3>chrome extension</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perferendis atque beatae provident consectetur eos doloremque molestiae vel neque obcaecati?</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
+        </div>
 
-            <div class="work">
-                <img src="/img/work3.jpg" alt="">
-                <div class="layer">
-                    <h3>data fetch api</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perferendis atque beatae provident consectetur eos doloremque molestiae vel neque obcaecati?</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+
+    <!-- -----------------services-------------------------- -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <span class="material-symbols-outlined">language</span>
+                    <h2>Web Developer</h2>
+                    <p>Website templates, Complete ready to use websites, Portfolio Sites, website maintainence</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <span class="material-symbols-sharp">extension</span>
+                    <h2>Chrome Extension</h2>
+                    <p>Various types of Chrome Extension to cater needs and fullfill user requirements. Ready to use extensions with great design</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <!-- <span class="material-symbols-sharp">dns</span> -->
+                    <span class="material-symbols-sharp">database</span>
+                    <h2>Backend Development</h2>
+                    <p>Backend of websites, database development, API creations and integrations</p>
+                    <a href="#">Learn More</a>
                 </div>
             </div>
         </div>
-
-        <a href="#" class="btn">See more</a>
-
     </div>
-</div>
 
-<!-- ------------------------------Contact-------------------------------------- -->
+    <!-- -----------------------------Portfolio------------------------------ -->
 
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i> contact@email.com</p>
-                <p><i class="fa-solid fa-phone"></i> +91 1234567898</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-stack-overflow"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="/img/work1.jpg" alt="">
+                    <div class="layer">
+                        <h3>social media website</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perferendis atque beatae
+                            provident consectetur eos doloremque molestiae vel neque obcaecati?</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
 
-                <a href="#" class="btn btn-2">Download Resume</a>
+                <div class="work">
+                    <img src="/img/work2.jpg" alt="">
+                    <div class="layer">
+                        <h3>chrome extension</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perferendis atque beatae
+                            provident consectetur eos doloremque molestiae vel neque obcaecati?</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
 
+                <div class="work">
+                    <img src="/img/work3.jpg" alt="">
+                    <div class="layer">
+                        <h3>data fetch api</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt perferendis atque beatae
+                            provident consectetur eos doloremque molestiae vel neque obcaecati?</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
             </div>
 
-            <div class="contact-right">
-                <form >
-                    <input type="text" name="Name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="Your email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn-2">Submit</button>
-                </form>
+            <a href="#" class="btn">See more</a>
 
+        </div>
+    </div>
+
+    <!-- ------------------------------Contact-------------------------------------- -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> ujjawalkumar1729@.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 1234567898</p>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/ujjawal1" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/ujjawal-kmr" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://stackoverflow.com/users/15375057/ujjawal-kumar" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://linktr.ee/ujjawal_kumar" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+
+                    <a href="#" class="btn btn-2">Download Resume</a>
+
+                </div>
+
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn-2">Submit</button>
+                    </form>
+
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="go-up">
-    <a href="#"><i class="fa-solid fa-angle-up"></i></a>
-</div>
+    <div class="go-up">
+        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
 
-<!-- -----------------------------------footer----------------------------------- -->
+    <!-- -----------------------------------footer----------------------------------- -->
 
-<div class="copyright">
-    <p>Copyright &copy; Ujjawal</p>
-</div>
+    <div class="copyright">
+        <p>Copyright &copy; Ujjawal</p>
+    </div>
 
 
-<!-- ------------------JavaScript----------------------------- -->
-<script>
-var tablinks = document.getElementsByClassName('tab-links')
-var tabcontents = document.getElementsByClassName('tab-contents')
+    <!-- ------------------JavaScript----------------------------- -->
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links')
+        var tabcontents = document.getElementsByClassName('tab-contents')
 
-function opentab(tabName){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
+        function opentab(tabName) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
 
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabName).classList.add("active-tab");
-}
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
 
-</script>
+    </script>
 
-<script>
-    var sideMenu = document.getElementById("sidemenu");
-    function openMenu(){
-        sideMenu.style.right = "0";
-    }
+    <script>
+        var sideMenu = document.getElementById("sidemenu");
+        function openMenu() {
+            sideMenu.style.right = "0";
+        }
 
-    function closeMenu(){
-        sideMenu.style.right = "-200px";
-    }
-</script>
+        function closeMenu() {
+            sideMenu.style.right = "-200px";
+        }
+    </script>
 
-  </body>
+</body>
+
 </html>

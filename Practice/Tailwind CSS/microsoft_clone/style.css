@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar{
+    @apply
+    flex align-middle justify-end space-x-28 px-4
+}

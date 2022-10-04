@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microsoft – Cloud, Computers, Apps &amp; Gaming</title>
     <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/91da132222.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -18,62 +19,79 @@
                     <div class="line h-0.5 w-6 my-1 bg-black"></div>
                     <div class="line h-0.5 w-6 my-1 bg-black"></div>
                 </div>
-                <div class="search text-center md:hidden">sicon</div>
+                <div class="search text-center md:hidden w-6 ml-4"><img src="/assets/searchIcon.svg" alt=""></div>
             </div>
 
-            <div class="logo text-center md:order-1 flex">
-                <div class="w-28"><img src="/imgs/mslogo.png" alt=""></div>
+            <div class="logo text-center md:order-1 flex justify-center">
+                <div class="w-28"><img src="/assets/mslogo.png" alt=""></div>
 
                 <div
-                    class="features absolute md:static w-fit md:w-auto bg-gray-200 md:bg-white inset-0 md:flex md:mx-4 md:space-x-2 -translate-x-96 md:-translate-x-0">
-                    <div class="fitem">Microsoft 365</div>
-                    <div class="fitem">Teams</div>
-                    <div class="fitem">Windows</div>
-                    <div class="fitem">Surface</div>
-                    <div class="fitem">Xbox</div>
-                    <div class="fitem">Support</div>
+                    class="features absolute md:static w-fit md:w-auto bg-gray-200 md:bg-white inset-0 md:flex md:mx-4 md:space-x-6 -translate-x-96 md:-translate-x-0">
+                    <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Microsoft 365</div>
+                    <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Teams</div>
+                    <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Windows</div>
+                    <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Surface</div>
+                    <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Xbox</div>
+                    <div class="fitem hover:underline hover:underline-offset-8 cursor-pointer">Support</div>
                 </div>
             </div>
             <div class="cart text-center md:order-3 flex">
-                <div class="search md:block">Searchicon</div>
-                <div>cart</div>
+                <div class="search hidden md:block">All Microsoft</div>
+                <img class="hidden md:block w-6 mx-4" src="/assets/searchIcon.svg" alt="">
+                <img class="w-6 " src="/assets/cart-shopping-solid.svg" alt="">
+                <img class="w-6 ml-4" src="/assets/circle-user.svg" alt="">
             </div>
         </div>
 
         <div class="slider flex flex-col-reverse md:flex-row bg-[#f2f2f2]">
-            <div class="left flex flex-col justify-center items-center md:items-baseline py-12">
-                <h1 class="h1 text-3xl font-semibold mx-5">Surface Laptop 4</h1>
-                <p class="w3/4 mx-5 text-center md:text-left">
+            <div class="left flex flex-col justify-center items-center md:items-baseline py-12 mx-12 md:h-96">
+                <h1 class="h1 text-3xl font-semibold">Surface Laptop 4</h1>
+                <p class="w3/4 py-5 text-center md:text-left">
                     Do it all with a perfect balance of sleek, ultra-thin design, multitasking speed and improved
                     performance
                 </p>
                 <button
-                    class="text-white bg-[#0067b8] font-semibold px-2 py-2 m-5 rounded-sm hover:bg-blue-800 cursor-pointer">Shop
+                    class="text-white bg-[#0067b8] font-semibold px-2 py-2 rounded-sm hover:bg-blue-800 cursor-pointer">Shop
                     now</button>
             </div>
 
             <div class="right">
-                <img src="/imgs/ic6.webp" alt="">
+                <img class="w-[60rem] md:w-[64rem] md:hidden" src="/assets/Highlight-Surface-laptop.jpg" alt="">
+                <img class="hidden md:inline-block" src="/assets/ic6.webp" alt="">
             </div>
 
         </div>
 
-        <div class="promo space-y-4">
-            <div class="item flex space-x-2 mx-4 items-center">
-                <img src="/imgs/ms.webp" alt="">
-                <span>Choose your Microsoft 365</span>
+        <div class="promo space-y-6 flex justify-center items-center flex-col md:flex-row">
+            <div class="item flex flex-col space-x-2 mx-4 mt-6 items-center">
+                <img src="/assets/ms.webp" alt="">
+                <span class="font-sm text-center">Choose your Microsoft 365</span>
             </div>
-            <div class="item flex space-x-2 mx-4 items-center">
-                <img src="/imgs/surf-dev.webp" alt="">
-                <span>Explore Surface devices</span>
+            <div class="flex flex-col sm:flex-row">
+                <div class="item flex flex-col space-x-2 mx-4 items-center">
+                    <img src="/assets/surf-dev.webp" alt="">
+                    <span class="font-sm text-center">Explore Surface devices</span>
+                </div>
+                <div class="item flex flex-col space-x-2 mx-4 items-center">
+                    <img src="/assets/xbox.webp" alt="">
+                    <span class="font-sm text-center">Buy Xbox games</span>
+                </div>
             </div>
-            <div class="item flex space-x-2 mx-4 items-center">
-                <img src="/imgs/xbox.webp" alt="">
-                <span>Buy Xbox games</span>
+            <div class="item flex flex-col space-x-2 mx-4 items-center">
+                <img src="/assets/ms.webp" alt="">
+                <span class="font-sm text-center">Get Windows 11</span>
             </div>
-            <div class="item flex space-x-2 mx-4 items-center">
-                <img src="/imgs/ms.webp" alt="">
-                <span>Get Windows 11</span>
+        </div>
+
+        <div class="edgePromo">
+            <img class="background w-[100%]" src="/assets/edgeBackground.avif" alt="">
+            <div class="card m-6 p-4 lg:p-20 lg:w-96 lg:border lg:bg-blue-100 lg:shadow-sm">
+                <h1 class="h1 text-3xl font-semibold">Microsoft Edge</h1>
+                <p class="py-5 ">World-class performance with more privacy, more
+                    productivity and more value while you browse</p>
+                <button
+                    class="text-white bg-[#0067b8] font-semibold px-2 py-2 rounded-sm hover:bg-blue-800 cursor-pointer">Download
+                    now</button>
             </div>
         </div>
     </div>

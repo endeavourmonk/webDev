@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-           <div class="left flex items-center">
-                <div class="logo w-28">
+    <header class="drop-shadow-md">
+        <div class="navbar flex justify-between items-center bg-white">
+           <div class="left flex items-center my-4">
+                <div class="hamburger mx-2 cursor-pointer">
+                    <div class="line h-0.5 w-6 bg-black my-1"></div>
+                    <div class="line h-0.5 w-6 bg-black my-1"></div>
+                    <div class="line h-0.5 w-6 bg-black my-1"></div>
+                </div>
+                <div class="logoText font-semibold mx-2 cursor-pointer text-2xl">Myntra</div>
+                <div class="logo hidden w-28">
                     <img src="https://images.indianexpress.com/2021/01/myntra.png" alt="myntra">
                 </div>
-                <ul class="flex space-x-2">
+                <ul class="hidden space-x-2 mx-2">
                     <li>MEN</li>
                     <li>WOMEN</li>
                     <li>KIDS</li>
@@ -24,10 +30,24 @@
                 </ul>
            </div> 
            
-           <div class="right">
-
+           <div class="right flex items-center space-x-2 mx-2 my-2">
+                <img class="search w-6 cursor-pointer" src="/assets/magnifying-glass-solid.svg" alt="">
+                <img src="" alt="">
+                <img class="wishlist w-6 cursor-pointer" src="/assets/heart-regular.svg" alt="">
+                <img class="search w-6 cursor-pointer" src="/assets/shopping-bag-svgrepo-com.svg" alt="">
+                
            </div>
         </div>
     </header>
+
+   <div class="container bg-yellow-50 my-2">
+    <div class="types">
+        <div class="icons">
+            <img src="/assets/top-img.png" alt="">
+        </div>
+        <img class="poster w-full mt-4" src="/assets/sale-poster.png" alt="">
+        <img class="poster w-full my-1" src="/assets/sponser.png" alt="">
+    </div>
+   </div>
 </body>
 </html>

@@ -11,3 +11,5 @@
 5.	In tailwind.config.js replace content: [] with content: ["*"]
 6.	Add "start": "vite" in scripts package.json.
 7.	Run "npm run start" to start the development server.
+
+Add "build": "vite build" in package.json to build using vite.

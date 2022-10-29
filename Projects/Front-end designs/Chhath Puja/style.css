@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .rounded-t-40-100 {
+    border-top-left-radius: 40% 100%;
+    border-top-right-radius: 40% 100%;
+  }
+
+  .rounded-for-cloth {
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-bottom-left-radius: 35% 10%;
+    border-bottom-right-radius: 25% 10%;
+  }
+
+  .rounded-b-25-0 {
+    border-bottom-left-radius: 25% 0%;
+    border-bottom-right-radius: 25% 0%;
+  }
+
+  .shadow-grad-user {
+    background: rgb(144, 41, 1);
+    background: linear-gradient(
+      00deg,
+      rgba(144, 41, 1, 1) 0%,
+      rgba(243, 120, 26, 1) 46%,
+      rgba(154, 43, 4, 1) 99%
+    );
+  }
+
+  .shadow-grad-sky-user {
+    background: rgb(144, 41, 1);
+    background: radial-gradient(
+      circle,
+      rgb(203, 36, 3) 0%,
+      rgba(243, 120, 26, 1) 20%,
+      rgba(154, 43, 4, 1) 99%
+    );
+  }
+}

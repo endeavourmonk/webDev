@@ -15,7 +15,7 @@
 }
 
 #board {
-    background: linear-gradient(#29601c, #fdf171);
+    background: linear-gradient(#BEB7A4, #D8896B);
     width: 90vmin;
     height: 90vmin;
     display: grid;
@@ -24,14 +24,35 @@
     border: 2px solid black;
 }
 
-.head{
-    background: red;
+#scoreBoard,
+#highScoreBoard {
+    position: absolute;
+    top: 9px;
+    left: 100px;
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: bolder;
 }
 
-.snake{
-    background: yellow;
+#highScoreBoard {
+    top: 60px;
+    left: 70px;
 }
 
-.food{
-    background: blue;
+.head {
+    background: #DCE8E0;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.snake {
+    background: linear-gradient(#766A65, #EDD812);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.food {
+    background: linear-gradient(yellow, orange);
+    border: 1px solid black;
+    border-radius: 50px;
 }

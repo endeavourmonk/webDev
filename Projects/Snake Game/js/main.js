@@ -6,7 +6,7 @@ let direction = { x: 0, y: 0 };
 // const moveSound = new Audio();
 // const musicSound = new Audio();
 let lastPaintTime = 0;
-let speed = 9;
+let speed = 5;
 let snakeArr = [
     { x: 13, y: 15 }
 ];
@@ -63,6 +63,7 @@ function generateFoodAndUpdateSnakeAndScores() {
         snakeArr.unshift({ x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y })
         generateFood();
         score++;
+        speed += 0.1;
         scoreBox.innerHTML = 'Score: ' + score;
         // updating highscore
         if (score > highScoreVal) {
@@ -108,10 +109,12 @@ function gameEngine() {
         alert("Game Over. Press any key to continue");
         snakeArr = [{ x: 13, y: 15 }];
         // musicSound.play();
+        speed = 5;
         score = 0;
         scoreBox.innerHTML = 'Score: ' + score;
     }
     generateFoodAndUpdateSnakeAndScores();
+
     // Moving the snake
     for (let i = snakeArr.length - 2; i >= 0; i--) {
         snakeArr[i + 1] = { ...snakeArr[i] };

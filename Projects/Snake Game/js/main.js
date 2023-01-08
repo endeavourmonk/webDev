@@ -18,8 +18,14 @@ let highScore;
 let highScoreVal = 0;
 let inputDir = { x: 0, y: 0 };
 
-// game functions
+// Setting name on screen from localstorage
+let Name = localStorage.getItem("playerName");
+if (Name !== null) {
+    let playerName = document.getElementById("playerName");
+    playerName.innerHTML = Name.substr(1, Name.length - 2);
+}
 
+// game functions
 function main(currentTime) {
     window.requestAnimationFrame(main);
     // console.log(currentTime);
@@ -29,7 +35,6 @@ function main(currentTime) {
     lastPaintTime = currentTime;
     gameEngine();
 }
-
 
 let isCollide = (snake) => {
     // If you bump into yourself 
@@ -44,7 +49,6 @@ let isCollide = (snake) => {
     }
     return false;
 }
-
 
 // function to genarate food
 let generateFood = () => {
@@ -119,7 +123,6 @@ function gameEngine() {
     displaySnake();
     displayFood();
 }
-
 // game logics
 
 // musicSound.play();

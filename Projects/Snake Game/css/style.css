@@ -25,10 +25,11 @@
 }
 
 #scoreBoard,
-#highScoreBoard {
+#highScoreBoard,
+#playerName {
     position: absolute;
-    top: 9px;
-    left: 100px;
+    top: 110px;
+    left: 70px;
     color: whitesmoke;
     font-size: 40px;
     font-weight: bolder;
@@ -36,6 +37,11 @@
 
 #highScoreBoard {
     top: 60px;
+    left: 70px;
+}
+
+#playerName {
+    top: 10px;
     left: 70px;
 }
 

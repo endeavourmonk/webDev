@@ -2,6 +2,7 @@ let totalFloors = document.getElementById("NoOfFloors");
 let totalLifts = document.getElementById("NoOfLifts");
 let displayArea = document.getElementById("displayArea");
 let submit = document.getElementById("Submit");
+let liftReqQueue = new Array();
 
 // generating floors
 function generateFloors(totalFloor) {
@@ -30,7 +31,6 @@ function generateFloors(totalFloor) {
  
     `;
   }
-  console.log("generateFloors called");
   return floor;
 }
 
@@ -49,11 +49,15 @@ function generateLifts(totalLifts) {
   return lift;
 }
 
+// getting all lifts and then filtering all free ones and then finding the nearest lift and finally moving to destination
 function moveLiftTo(destinationFLoor) {
   const lifts = Array.from(document.getElementsByClassName("lift"));
-  // console.log(lifts);
   const liftAv = lifts.filter((lift) => lift.dataset.status === "free");
-  // console.log("free lifts: " + liftAv);
+  if (liftAv.length === 0) {
+    console.log("not av lifts");
+    return false;
+  }
+
   let distance = Number.MAX_VALUE;
   let liftToMove;
   for (const i of liftAv) {
@@ -70,23 +74,45 @@ function moveLiftTo(destinationFLoor) {
   setTimeout(() => {
     liftToMove.dataset.status = "free";
   }, 2000 * distance);
+  // liftToMove.style.transition = `all ${2 * Math.abs(distance)}s linear`;
+  // liftToMove.style.transform = `translate3d(0,${-154 * (destinationFLoor - 1)}px,0)`;
+  animateDoor(liftToMove);
+  return true;
 }
 
+function animateDoor(lift) {
+  lift.children[0].classList.add("leftDoorSlide");
+  lift.children[1].classList.add("rightDoorSlide");
+  setTimeout(() => {
+    lift.children[0].classList.remove("leftDoorSlide");
+    lift.children[1].classList.remove("rightDoorSlide");
+  }, 2500);
+}
+
+// cheking for all button click events
 addEventListener("click", (e) => {
   if (
     e.target.classList.contains("liftUpButton") ||
     e.target.classList.contains("liftDownButton")
   ) {
-    // console.log("clidked btn");
-    console.log("floor - " + e.target.dataset.floorno);
-    moveLiftTo(e.target.dataset.floorno);
+    liftReqQueue.push(e.target.dataset.floorno);
+    console.log("reqQ = " + liftReqQueue);
   }
 });
+
+// regularly checking for requests in queue and fulfilling when lift free
+setInterval(() => {
+  if (liftReqQueue.length) {
+    const moveToFloor = liftReqQueue[0];
+    const res = moveLiftTo(moveToFloor);
+    if (res) liftReqQueue.shift();
+  }
+  return;
+}, 10);
 
 submit.addEventListener("click", () => {
   let floors = generateFloors(totalFloors.value);
   displayArea.innerHTML = floors;
-  console.log("submit");
   let form = document.getElementById("form-container");
   form.remove();
 });

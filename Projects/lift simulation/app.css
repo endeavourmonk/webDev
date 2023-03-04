@@ -112,10 +112,20 @@ input[type="submit"]:hover {
   height: 100%;
   width: 50%;
   border-right: 1px solid black;
+  transition: all 2.5s;
 }
 
 .right-door {
   height: 100%;
   width: 50%;
   border-left: 1px solid black;
+  transition: all 2.5s;
+}
+
+.leftDoorSlide {
+  transform: translate(-90%);
+}
+
+.rightDoorSlide {
+  transform: translate(90%);
 }

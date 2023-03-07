@@ -67,16 +67,16 @@ function moveLiftTo(destinationFLoor) {
       liftToMove = i;
     }
   }
+  liftToMove.dataset.status = "busy";
   liftToMove.style.transform = `translateY( ${-154 * destinationFLoor}px)`;
   liftToMove.dataset.position = destinationFLoor;
-  console.log("lift - pos - " + liftToMove.dataset.position);
-  liftToMove.dataset.status = "busy";
+  liftToMove.style.transition = `all ${2 * Math.abs(distance)}s linear`;
+  setTimeout(() => {
+    animateDoor(liftToMove);
+  }, 2000 * distance);
   setTimeout(() => {
     liftToMove.dataset.status = "free";
-  }, 2000 * distance);
-  // liftToMove.style.transition = `all ${2 * Math.abs(distance)}s linear`;
-  // liftToMove.style.transform = `translate3d(0,${-154 * (destinationFLoor - 1)}px,0)`;
-  animateDoor(liftToMove);
+  }, 2000 * distance + 5500);
   return true;
 }
 
@@ -108,9 +108,13 @@ setInterval(() => {
     if (res) liftReqQueue.shift();
   }
   return;
-}, 10);
+}, 1000);
 
 submit.addEventListener("click", () => {
+  if (totalFloors > 30 || totalLifts > 10) {
+    alert("Sorry please enter floor upto 30 and lift upto 10");
+    return;
+  }
   let floors = generateFloors(totalFloors.value);
   displayArea.innerHTML = floors;
   let form = document.getElementById("form-container");

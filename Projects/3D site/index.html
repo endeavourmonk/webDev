@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="controls">
+      <button id="marble">
+        <img src="grey-blue-marble-texture.jpg" alt="Marble" />
+      </button>
+      <button id="sandstone">
+        <img src="uneven-sandstone-tile-wall-surface.jpg" alt="Marble" />
+      </button>
+    </div>
+    <div id="stage"></div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
